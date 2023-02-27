@@ -29,7 +29,6 @@ export function postTweet(req, res) {
         tweetClass.post();
         return res.status(201).send('OK, seu tweet foi criado');
     } catch (error) {
-        console.log(error);
         return res.sendStatus(500);
     }
 }
@@ -43,7 +42,6 @@ export function getTweet(req, res) {
         const tweets = tweetClass.getTweetByUser();
         return res.status(200).send(tweets);
     } catch (error) {
-        console.log(error);
         return res.sendStatus(500);
     }  
 }
@@ -64,7 +62,6 @@ export function listTweets(req, res) {
         const tweets = tweetClass.list();
         return res.status(200).send(tweets);
     } catch (error) {
-        console.log(error);
         return res.sendStatus(500);
     }
 }

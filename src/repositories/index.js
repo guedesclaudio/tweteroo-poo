@@ -28,7 +28,6 @@ export class Tweet {
     }
 
     list() {
-        console.log(tweets);
         const limite = 10;
         const start = (this.page - 1) * limite;
         const end = this.page * limite;
@@ -41,7 +40,6 @@ export class Tweet {
     }
 
     getTweetByUser() {
-        console.log(this.username)
         return tweets.filter(t => t.username === this.username);
     }
 }
